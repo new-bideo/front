@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const thumbnailLinks = Array.from(
-    document.querySelectorAll(".yt-lockup-view-model__content-image")
+    document.querySelectorAll(".shelf-card__thumb")
   );
 
   thumbnailLinks.forEach(function (link) {
-    const overlay = link.querySelector(".ytThumbnailHoverOverlayViewModelHost");
+    const overlay = link.querySelector(".shelf-card__overlay");
     if (!overlay) {
       return;
     }
 
     function showOverlay() {
-      overlay.style.display = "block";
+      overlay.style.display = "flex";
     }
 
     function hideOverlay() {
